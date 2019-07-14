@@ -7,8 +7,10 @@ MAINTAINER Blue Clover Devices DevTeam
 ENV LANG C.UTF-8
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-                pandoc \
+		docbook-xsl-ns \
+		docbook5-xml \
                 make \
+                pandoc \
                 && rm -rf /var/lib/apt/lists/*
 
 ENV ANT_VERSION=1.10.3
