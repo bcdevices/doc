@@ -32,7 +32,7 @@ RUN wget -q --no-check-certificate --no-cookies http://archive.apache.org/dist/a
 RUN update-alternatives --install "/usr/bin/ant" "ant" "/opt/ant/bin/ant" 1 && \
     update-alternatives --set "ant" "/opt/ant/bin/ant"
 
-ENV PANDOC_VERSION=2.4
+ENV PANDOC_VERSION=2.7.3
 RUN wget -q --no-check-certificate --no-cookies https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb \
   && dpkg -i pandoc-${PANDOC_VERSION}-1-amd64.deb \
   && rm -f pandoc-${PANDOC_VERSION}-1-amd64.deb
