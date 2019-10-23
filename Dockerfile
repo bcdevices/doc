@@ -7,6 +7,7 @@ ENV LANG C.UTF-8
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		docbook-xsl-ns=1.79.1+dfsg-2 \
 		docbook5-xml=5.0-2 \
+		graphviz=2.38.0-17 \
 		make=4.1-9.1 \
 		pandoc=1.17.2~dfsg-3 \
 		&& rm -rf /var/lib/apt/lists/*
