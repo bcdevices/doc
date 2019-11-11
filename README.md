@@ -8,6 +8,7 @@
 Documentation toolchain
 
 - Apache Ant
+- Asciidoctor
 - Docbook5 XML 
 - DocBook XSL-NS
 - GNU Make
