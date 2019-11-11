@@ -5,6 +5,7 @@ FROM openjdk:8u212-b04-jdk-stretch
 ENV LANG C.UTF-8
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+		asciidoctor=1.5.4-2 \
 		docbook-xsl-ns=1.79.1+dfsg-2 \
 		docbook5-xml=5.0-2 \
 		graphviz=2.38.0-17 \
