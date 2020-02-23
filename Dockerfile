@@ -1,5 +1,5 @@
 # doc
-FROM openjdk:8u212-b04-jdk-stretch
+FROM openjdk:8u242-jdk-stretch
 
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		pandoc=1.17.2~dfsg-3 \
 		&& rm -rf /var/lib/apt/lists/*
 
-ENV ANT_VERSION=1.10.3
+ENV ANT_VERSION=1.10.7
 ENV ANT_HOME=/opt/ant
 
 # change to tmp folder
@@ -34,7 +34,7 @@ RUN wget -q --no-check-certificate --no-cookies http://archive.apache.org/dist/a
 RUN update-alternatives --install "/usr/bin/ant" "ant" "/opt/ant/bin/ant" 1 && \
     update-alternatives --set "ant" "/opt/ant/bin/ant"
 
-ENV PANDOC_VERSION=2.7.3
+ENV PANDOC_VERSION=2.9.2
 RUN wget -q --no-check-certificate --no-cookies https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb \
   && dpkg -i pandoc-${PANDOC_VERSION}-1-amd64.deb \
   && rm -f pandoc-${PANDOC_VERSION}-1-amd64.deb
